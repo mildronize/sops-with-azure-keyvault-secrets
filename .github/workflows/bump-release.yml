@@ -1,0 +1,20 @@
+name: Bump & release
+
+on:
+  push: # Ensure a new release is created for each new tag
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  bump-version-and-release:
+    name: Bump version & release
+    if: github.event.base_ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        uses: undergroundwires/bump-everywhere@master
+        with:
+          commit-message: 'Bump version to {{version}}'
+          user: bumping-version-bot
+          release-token: ${{ secrets.PAT_Github_Bump_Release_version }} # Does not trigger release pipeline if we use default token: https://github.community/t5/GitHub-Actions/Github-Action-trigger-on-release-not-working-if-releases-was/td-p/34559
+                                                        # GitHub does not inject secrets if pipeline runs from fork or a fork is merged to main repo. 
