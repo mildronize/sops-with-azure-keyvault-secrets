@@ -1,0 +1,5 @@
+# THIS IS **DO NOT PUSH PLAIN TEXT** IN TO THE REPO!
+# THIS IS FOR EXAMPLE ONLY !!!!!!!!!!!
+scope_a: 
+  app_service: 
+    app1: This is Super secret
