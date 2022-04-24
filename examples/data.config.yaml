@@ -1,0 +1,9 @@
+# General
+subscription_name: subscription_name
+subscription_id: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+resource_group: rgresource_group
+location: Central US
+# Azure Key vault
+keyvault_name: kv-github-thadaw
+keyvault_key: sops-key
+service_principle_name: sp_sops_github_action_thadaw
